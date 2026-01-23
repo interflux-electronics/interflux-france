@@ -1,0 +1,155 @@
+// Interflux Design System (IFDS)
+
+@font-face {
+    font-family: 'Nunito Sans ExtraLight';
+    src: url('https://cdn.interflux.com/fonts/nunito-sans/NunitoSans-ExtraLight.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito Sans Light';
+    src: url('https://cdn.interflux.com/fonts/nunito-sans/NunitoSans-Light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito Sans Regular';
+    src: url('https://cdn.interflux.com/fonts/nunito-sans/NunitoSans-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito Sans SemiBold';
+    src: url('https://cdn.interflux.com/fonts/nunito-sans/NunitoSans-SemiBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito Sans Bold';
+    src: url('https://cdn.interflux.com/fonts/nunito-sans/NunitoSans-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito Sans ExtraBold';
+    src: url('https://cdn.interflux.com/fonts/nunito-sans/NunitoSans-ExtraBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito Sans Black';
+    src: url('https://cdn.interflux.com/fonts/nunito-sans/NunitoSans-Black.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --blue-0: #3687d9;
+    /*hyperlinks*/
+    --blue-1: #3077bf;
+    --blue-2: #2967a6;
+    --blue-3: #23578c;
+    /* Interflux logo */
+    --blue-4: #1d4773;
+    --blue-5: #163759;
+
+    --orange-0: #ff9d4d;
+    --orange-1: #ff8f33;
+    --orange-2: #ff8119;
+    --orange-3: #ff7300;
+    /* LMPA logo */
+    --orange-4: #e66800;
+    --orange-5: #cc5c00;
+
+    --grey-0: #f7f7f7;
+    /* backgrounds, borders */
+    --grey-1: #e7e7e9;
+    /* borders */
+    --grey-2: #cecfd2;
+    --grey-3: #b6b7bc;
+    --grey-4: #9d9fa5;
+    --grey-5: #85878f;
+    --grey-6: #6d6f78;
+    --grey-7: #3c3f4b;
+    /* paragraphs */
+
+    --green-1: #52996f;
+    /* CTA & buttons */
+    --green-2: #398451;
+    --green-3: #2e6b41;
+
+    --red-1: #fc5d5d;
+    /* errors */
+}
+
+body {
+    font-family: 'Nunito Sans Regular', sans-serif;
+    /* Important, we explicitly name fonts, no weights used */
+    font-style: normal;
+    /* Important, we use weightless fonts */
+    font-weight: normal;
+    /* Important, we use weightless fonts */
+    font-size: 16px;
+    line-height: 130%;
+    margin: 0;
+    background-color: white;
+    color: var(--grey-7);
+    -webkit-font-smoothing: antialiased;
+    /* Without it, fonts will look bloated Chrome and Safari */
+    -moz-osx-font-smoothing: grayscale;
+    /* Without it, fonts will look bloated Firefox */
+
+    width: 100%;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: 'Nunito Sans Bold', sans-serif;
+    /* More often than not, headings are one liners */
+    line-height: 100%;
+    /* Important, we explicitly name fonts, no weights used */
+    font-weight: normal;
+    /* Important, we use weightless fonts */
+}
+
+p {
+    font-family: 'Nunito Sans Regular', sans-serif;
+    /* Paragraphs are mostly multiline */
+    line-height: 180%;
+    /* Important, we explicitly name fonts, no weights used */
+    font-weight: normal;
+    /* Important, we use weightless fonts */
+    margin: 0;
+
+    a {
+        color: var(--blue-0);
+        text-decoration: underline;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: var(--orange-3);
+        }
+    }
+}
+
+img {
+    display: block;
+    /* override browser default to resolves empty space below images */
+}
+
+a {
+    text-decoration: none;
+}
