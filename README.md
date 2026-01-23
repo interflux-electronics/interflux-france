@@ -1,22 +1,37 @@
 # Interflux France website
 
-This repo holds the code for rendering the website of Interflux France.
+This repo is the code base for the website [interfluxfrance.com](https://interfluxfrance.com).
 
-[interfluxfrance.com](https://interfluxfrance.com)
-
-Built with:
+Tech stack:
 
 * Svelte Kit
+* Typescript
+* SASS
+* Bun
 * Prettier
 * ES Lint
-* SASS
-
-Built by:
-
-* Jan Werkhoven
+* Debian
+* Nginx
+* Node
+* Figma
 
 ## Development
 
 ```sh
 bun run dev --open
 ```
+
+## Production
+
+TBC
+
+---
+
+Contributors:
+
+* Jan Werkhoven 岩 🏔️
+* Steven Teliszewski 🇧🇪
+
+Questions?
+
+Ask Jan on [jw@interflux.au](mailto:jw@interflux.au)
