@@ -4,7 +4,7 @@ This repo is the code base for the website [interfluxfrance.com](https://interfl
 
 Tech stack:
 
-* Svelte Kit
+* Svelte Kit ❤️
 * Typescript
 * SASS
 * Bun
@@ -13,7 +13,16 @@ Tech stack:
 * Debian
 * Nginx
 * Node
-* Figma
+* Figma ⭐️
+
+Contributors:
+
+* Jan Werkhoven 岩 🏔️
+* Steven Teliszewski 🇧🇪
+
+Questions?
+
+Ask Jan on [jw@interflux.au](mailto:jw@interflux.au)
 
 ## Development
 
@@ -24,14 +33,3 @@ bun run dev --open
 ## Production
 
 TBC
-
----
-
-Contributors:
-
-* Jan Werkhoven 岩 🏔️
-* Steven Teliszewski 🇧🇪
-
-Questions?
-
-Ask Jan on [jw@interflux.au](mailto:jw@interflux.au)
