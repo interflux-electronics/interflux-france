@@ -185,12 +185,17 @@ a {
 // Headings
 
 .h {
-    &.light {
+    &.primary.light {
         font-family: 'Nunito Sans Light', sans-serif;
         font-size: 32px;
         line-height: 140%;
     }
+
+    &.secondary.bold {
+        font-family: 'Nunito Sans Bold', sans-serif;
+        font-size: 20px;
+        line-height: 100%;
+    }
 }
 
 // Tiles
-

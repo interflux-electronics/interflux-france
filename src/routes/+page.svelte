@@ -37,7 +37,7 @@
 
 <section id="interflux">
 	<div class="liner">
-		<h2 class="h light">
+		<h2 class="h primary light">
 			Produits de brasage pour<br />
 			l'industrie électronique
 		</h2>
@@ -125,7 +125,7 @@
 
 <section id="kolver">
 	<div class="liner">
-		<h2 class="h light">
+		<h2 class="h primary light">
 			Produits de brasage pour<br />
 			l'industrie électronique
 		</h2>
@@ -195,7 +195,7 @@
 
 <section id="service">
 	<div class="liner">
-		<h2 class="h light">
+		<h2 class="h primary light">
 			33 ans de savoir-faire <br />
 			à votre service
 		</h2>
@@ -225,6 +225,62 @@
 		/>
 	</div>
 </section>
+
+<section id="location">
+	<div class="text">
+		<h2 class="h primary light">Situé au cœur de la France</h2>
+		<p>
+			Interflux France est idéalement situé au cœur de la France, près de Paris, à Trappes (78190).
+		</p>
+		<p>
+			Nous sommes à proximité de la plupart des grandes zones industrielles afin de fournir une
+			assistance technique sur site.
+		</p>
+	</div>
+</section>
+
+<section id="equipe">
+	<h2 class="h secondary bold">Équipe</h2>
+	<ul>
+		<li>
+			<img src="/img/anonymous.svg" alt="" />
+			<div class="text">
+				<p><strong>Daniel Laprade</strong></p>
+				<p>PDG</p>
+			</div>
+		</li>
+
+		<li>
+			<img src="/img/anonymous.svg" alt="" />
+			<div class="text">
+				<p><strong>Nora Tamsaout</strong></p>
+				<p>Adjoint de direction</p>
+			</div>
+		</li>
+	</ul>
+</section>
+
+<section id="contact">
+	<h2>Contactez-nous</h2>
+	<p>+31 7 12 34 56 67</p>
+	<p><a href="mailto:d.laprade@interfluxfrance.com">d.laprade@interfluxfrance.com</a></p>
+	<p>
+		Interflux France (SAS, SIREN 391 225 935)<br />
+		ZA Des Bruyères, 5, Rue Pavlov - Batiment n° 4<br />
+		78190 Trappes<br />
+		FRANCE
+	</p>
+	<img id="flag" src="https://cdn.interflux.com/images/flags/FR.svg" alt="flag of France" />
+</section>
+
+<footer>
+	<a href="https://interflux.com">
+		<img
+			src="https://cdn.interflux.com/images/logos/interflux-symbol-white.svg"
+			alt="Interflux symbol"
+		/>
+	</a>
+</footer>
 
 <style lang="scss">
 	#hero {
@@ -350,6 +406,102 @@
 				height: 477px;
 				width: auto;
 			}
+		}
+	}
+
+	#location {
+		background-color: var(--blue-5);
+		height: 680px;
+		position: relative;
+		.text {
+			position: absolute;
+			left: 100px;
+			top: 100px;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			max-width: 300px;
+			h2,
+			p {
+				color: white;
+			}
+			p + p {
+				margin-top: 10px;
+			}
+		}
+	}
+
+	#equipe {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 80px 0 100px;
+		gap: 40px;
+		ul {
+			list-style: none;
+			display: flex;
+			flex-direction: row;
+			gap: 50px;
+			li {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+				.text {
+					display: flex;
+					flex-direction: column;
+					p {
+						line-height: 150%;
+					}
+				}
+			}
+		}
+	}
+
+	#contact {
+		background-color: var(--blue-4);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 60px;
+		h2,
+		p {
+			color: white;
+			text-align: center;
+		}
+		h2 {
+			font-family: 'Nunito Sans Bold', sans-serif;
+			font-size: 32px;
+			line-height: 100%;
+		}
+		p {
+			font-size: 17px;
+			line-height: 140%;
+			a {
+				color: white;
+			}
+		}
+		img {
+			width: 32px;
+			height: 24px;
+			border: 1px solid white;
+			margin-top: 10px;
+		}
+		h2 + p {
+			margin-top: 30px;
+		}
+		p + p {
+			margin-top: 20px;
+		}
+	}
+	footer {
+		background-color: var(--blue-5);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 125px;
+		img {
+			width: auto;
+			height: 70px;
 		}
 	}
 </style>
