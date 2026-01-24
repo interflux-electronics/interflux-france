@@ -1,7 +1,26 @@
 <script>
 	import '$lib/interflux-design-system.scss';
 	import '$lib/app.scss';
+	import 'mapbox-gl/dist/mapbox-gl.css';
 	import { ProductTile } from '$lib/components/interflux';
+	import { onMount } from 'svelte';
+	import mapboxgl from 'mapbox-gl';
+
+	let mapContainer;
+
+	onMount(() => {
+		mapboxgl.accessToken =
+			'pk.eyJ1IjoianctZmxvYXRwbGFuZS1kZXYiLCJhIjoiY2s4bWNnZnBhMG1lZjNocW9xMTNrZWIyZyJ9.ZIs8xxlge7f8r1aOzstHyQ';
+
+		const map = new mapboxgl.Map({
+			container: mapContainer,
+			style: 'mapbox://styles/jw-floatplane-dev/ck8mcsfr50uwe1iohs6xv6n0d',
+			center: [144.96, -37.81], // Melbourne
+			zoom: 12
+		});
+
+		return () => map.remove();
+	});
 </script>
 
 <section id="hero">
@@ -237,6 +256,8 @@
 			assistance technique sur site.
 		</p>
 	</div>
+
+	<div id="map" bind:this={mapContainer} style="width:100%; height:500px;"></div>
 </section>
 
 <section id="equipe">
@@ -413,8 +434,16 @@
 		background-color: var(--blue-5);
 		height: 680px;
 		position: relative;
+		display: flex;
+		flex-direction: column;
+
+		#map {
+			height: 680px;
+		}
+
 		.text {
 			position: absolute;
+			z-index: 1;
 			left: 100px;
 			top: 100px;
 			display: flex;
@@ -503,5 +532,10 @@
 			width: auto;
 			height: 70px;
 		}
+	}
+
+	:global(.mapboxgl-canvas) {
+		width: 100% !important;
+		height: 100% !important;
 	}
 </style>
