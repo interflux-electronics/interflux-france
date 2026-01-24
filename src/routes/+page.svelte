@@ -1,23 +1,229 @@
 <script>
 	import '$lib/interflux-design-system.scss';
 	import '$lib/app.scss';
+	import { ProductTile } from '$lib/components/interflux';
 </script>
 
 <section id="hero">
-	<img id="logo-1" src="/img/logo-1.svg" alt="Interflux logo 1" />
+	<img
+		id="logo-1"
+		src="https://cdn.interflux.com/images/logos/interflux-france-logo-white-on-blue.svg"
+		alt="Interflux logo 1"
+	/>
 	<h1>
 		<span>Partenaire de confiance<br /></span>
 		<span>de l'industrie électronique<br /></span>
-		<span>en France <img id="flag" src="/img/flag.svg" alt="flag of France" /></span>
+		<span
+			>en France <img
+				id="flag"
+				src="https://cdn.interflux.com/images/flags/FR.svg"
+				alt="flag of France"
+			/></span
+		>
 	</h1>
 	<p>
 		<span>Membre du&nbsp;</span>
 		<a href="https://interflux.group" target="_blank">
 			<span>Groupe Interflux</span>
-			<img id="logo-2" src="/img/logo-2.svg" alt="Interflux logo 2" />
+			<img
+				id="logo-2"
+				src="https://cdn.interflux.com/images/logos/secondary-interflux-electronics-symbol-1.svg"
+				alt="Interflux logo 2"
+			/>
 		</a>
 	</p>
 	<img id="bg" src="/img/hero@2400x1400.jpg" alt="electronics" />
+</section>
+
+<section id="interflux">
+	<div class="liner">
+		<h2 class="h light">
+			Produits de brasage pour<br />
+			l'industrie électronique
+		</h2>
+		<div class="text">
+			<p>
+				<strong>Interflux Electronics</strong>
+				est une entreprise belge (Gand) fondée en 1980. Elle sert des clients dans plus de 80 pays via
+				14 sociétés à travers le monde.
+			</p>
+			<p>
+				Elle se spécialise dans la recherche et la fabrication de produits chimiques de brasage de
+				haute qualité pour l'assemblage électronique : flux de brasage, crèmes à braser, fils à
+				braser, alliages de brasage et systèmes d'application de flux.
+			</p>
+			<p>
+				Interflux Electronics est réputée pour son innovation, ses flux sans nettoyage, ses flux
+				totalement exempts d'halogénures, ses alliages à bas point de fusion et ses 40 années
+				d'expertise technique dans le dépannage des problèmes liés à la fabrication électronique.
+			</p>
+			<p>Vers le site web: <a href="https://interflux.fr">www.interflux.fr</a></p>
+		</div>
+		<div class="product-tiles">
+			<ProductTile
+				href="https://interflux.fr"
+				src="https://cdn.interflux.com/images/logos/secondary-interflux-electronics-logo-2.svg"
+				alt="Interflux Electronics"
+				css="blue"
+			/>
+
+			<ProductTile
+				href="https://interflux.fr/product/IF-2005M"
+				src="https://cdn.interflux.com/images/products/IF-2005M/IF-2005M-10L-angle@600x600.webp"
+				h="IF 2005M"
+				p="Flux de brasage No-Residue"
+			/>
+
+			<ProductTile
+				href="https://interflux.fr/product/PacIFic-2009M"
+				src="https://cdn.interflux.com/images/products/PacIFic-2009M/Pacific-2009M-10L-angle@600x600.webp"
+				h="PacIFic 2009M"
+				p="Flux de brasage à base d'eau polyvalent"
+			/>
+
+			<ProductTile
+				href="https://interflux.fr/product/DP-5505"
+				src="https://cdn.interflux.com/images/products/DP-5505/DP-5505-solder-paste-SnAgCu-500g@600x600.webp"
+				h="DP 5505"
+				p="Crème à braser haute stabilité"
+			/>
+
+			<ProductTile
+				href="https://interflux.fr/product/LMPA-Q7"
+				src="https://cdn.interflux.com/images/products/LMPA-Q7/LMPA-Q7-1kg-cartridge@600x600.webp"
+				h="LMPA Q7"
+				p="Crême à braser á bas point de fusion"
+			/>
+
+			<ProductTile
+				href="https://interflux.fr/product/IF-14"
+				src="https://cdn.interflux.com/images/products/IF-14/IF-14-SnQ-500g@600x600.webp"
+				h="IF 14"
+				p="Fil de brasage populaire"
+			/>
+
+			<ProductTile
+				href="https://interflux.fr/product/Purgel"
+				src="https://cdn.interflux.com/images/products/Purgel/Purgel-3@600x600.webp"
+				h="Purgel"
+				p="Nettoyeur pour les systèmes de dosage"
+			/>
+
+			<ProductTile
+				href="https://interflux.fr/product/Solder-Bars"
+				src="https://cdn.interflux.com/images/products/Solder-Bars/Solder-Bars-15@600x600.webp"
+				h="Solder Bars"
+				p="Solder alloy LMPA-Q"
+			/>
+			<ProductTile href="https://interflux.fr" css="orange">
+				<p>vers le site web</p>
+				<p><em>www.interflux.fr</em></p>
+			</ProductTile>
+		</div>
+	</div>
+</section>
+
+<section id="kolver">
+	<div class="liner">
+		<h2 class="h light">
+			Produits de brasage pour<br />
+			l'industrie électronique
+		</h2>
+		<div class="text">
+			<p>
+				<strong>Kolver</strong> est une entreprise italienne (Thiene) fondée en 1989. Elle conçoit et
+				fabrique des visseuses électriques de précision industriels avec contrôle de couple et d'angle,
+				ainsi que des testeurs de couple, bras de réaction et accessoires.
+			</p>
+			<p>
+				Elle est spécialisée dans les applications manuelles et automatisées. Elle est reconnue pour
+				sa qualité "Made in Italy" et que elle est une Benefit Corporation depuis 2023. Elle exporte
+				dans plus de 50 pays.
+			</p>
+			<p>Vers le site web: <a href="https://kolver.com">www.kolver.com</a></p>
+		</div>
+		<div class="product-tiles">
+			<ProductTile href="https://kolver.com" src="/img/kolver-logo.png" alt="Kolver" css="white" />
+			<ProductTile
+				href="https://kolver.com/en/products/kducer-series"
+				src="/img/kolver-product-1.jpg"
+				h="K-DUCER Series"
+				p="Plage de couple : 0,05 - 70 Nm"
+			/>
+			<ProductTile
+				href="https://kolver.com/en/products/pluto-mito-nato-series"
+				src="/img/kolver-product-2.jpg"
+				h="PLUTO, MITO & NATO Series"
+				p="Plage de couple : 0,02 - 70 Nm"
+			/>
+			<ProductTile
+				href="https://kolver.com/en/products/ca-series"
+				src="/img/kolver-product-3.jpg"
+				h="CA Series"
+				p="Plage de couple : 0,015 - 70 Nm"
+			/>
+			<ProductTile
+				href="https://kolver.com/en/products/fab-raf-series"
+				src="/img/kolver-product-4.jpg"
+				h="FAB & RAF Series"
+				p="Plage de couple : 0,05 - 5,0 Nm"
+			/>
+			<ProductTile
+				href="https://kolver.com/en/products/kbl-brushless-series"
+				src="/img/kolver-product-5.jpg"
+				h="KBL BRUSHLESS Series"
+				p="Plage de couple : 0,04 - 4 Nm"
+			/>
+			<ProductTile
+				href="https://kolver.com/en/products/torque-testers"
+				src="/img/kolver-product-6.jpg"
+				h="Torque testers"
+				p="Plage de couple : ,05 - 100 Nm"
+			/>
+			<ProductTile
+				href="https://kolver.com/en/products/reaction-positioning-arms"
+				src="/img/kolver-product-7.jpg"
+				h="Reaction & positioning arms"
+			/>
+			<ProductTile href="https://kolver.com" css="orange">
+				<p>vers le site web</p>
+				<p><em>www.kolver.com</em></p>
+			</ProductTile>
+		</div>
+	</div>
+</section>
+
+<section id="service">
+	<div class="liner">
+		<h2 class="h light">
+			33 ans de savoir-faire <br />
+			à votre service
+		</h2>
+		<div class="text">
+			<p>
+				Interflux France est le principal distributeur agréé de d’Interflux Electronics et de Kolver
+				en France. Nous représentons ces deux marques car nous estimons que leur qualité est
+				inégalée en France.
+			</p>
+			<p>
+				<strong>Interflux Electronics</strong> invente et produit des produits chimiques de brasage pour
+				l'industrie électronique, tels que : flux de brasage, crèmes à braser, fils à braser, etc.
+			</p>
+			<p>
+				<strong>Kolver</strong> fabrique des visseuses de précision pour l’industrie manufacturière (automobile,
+				aéronautique, électronique, etc.).
+			</p>
+			<p>
+				Ce qui distingue Interflux France, c'est notre assistance technique. Depuis plus de 33 ans,
+				nous intervenons sur site dans les usines pour résoudre les problèmes techniques. Notre
+				savoir-faire accumulé est vaste et à votre service.
+			</p>
+		</div>
+		<img
+			src="/img/service.jpg"
+			alt="homme regardant des appareils électroniques et utilisant un vissuese"
+		/>
+	</div>
 </section>
 
 <style lang="scss">
@@ -96,6 +302,53 @@
 					width: 20px;
 					height: 20px;
 				}
+			}
+		}
+	}
+
+	#interflux,
+	#kolver {
+		border-bottom: 10px solid var(--grey-0);
+		padding-left: 180px;
+		.liner {
+			max-width: 800px;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+			padding: 150px 0;
+			.text {
+				columns: 2;
+				column-gap: 20px;
+				p + p {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+
+	#service {
+		padding-left: 240px;
+		.liner {
+			position: relative;
+			width: 900px;
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+			padding: 150px 0;
+			margin: 0 auto;
+			.text {
+				max-width: 400px;
+				p + p {
+					margin-top: 10px;
+				}
+			}
+			img {
+				position: absolute;
+				right: 0;
+				top: 200px;
+				height: 477px;
+				width: auto;
 			}
 		}
 	}
