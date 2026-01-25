@@ -7,17 +7,39 @@
 	import mapboxgl from 'mapbox-gl';
 
 	let mapContainer;
+	let map;
 
 	onMount(() => {
 		mapboxgl.accessToken =
 			'pk.eyJ1IjoianctZmxvYXRwbGFuZS1kZXYiLCJhIjoiY2s4bWNnZnBhMG1lZjNocW9xMTNrZWIyZyJ9.ZIs8xxlge7f8r1aOzstHyQ';
 
-		const map = new mapboxgl.Map({
+		map = new mapboxgl.Map({
 			container: mapContainer,
 			style: 'mapbox://styles/jw-floatplane-dev/ck8mcsfr50uwe1iohs6xv6n0d',
-			center: [144.96, -37.81], // Melbourne
-			zoom: 12
+			center: [-2.4731762021005954, 47.242523008246486], // Saint Nazaire, France
+			zoom: 5,
+			language: 'fr',
+
+			// Disable all user interaction
+			dragPan: false,
+			scrollZoom: false,
+			boxZoom: false,
+			dragRotate: false,
+			keyboard: false,
+			doubleClickZoom: false,
+			touchZoomRotate: false,
+			touchPitch: false
 		});
+
+		new mapboxgl.Marker({
+			element: (() => {
+				const el = document.createElement('div');
+				el.innerHTML = '<img src="/img/marker.svg" width="24" height="43">';
+				return el;
+			})()
+		})
+			.setLngLat([1.997589583952166, 48.772094842446805]) // Trappes
+			.addTo(map);
 
 		return () => map.remove();
 	});
@@ -246,6 +268,8 @@
 </section>
 
 <section id="location">
+	<div class="map" bind:this={mapContainer}></div>
+
 	<div class="text">
 		<h2 class="h primary light">Situé au cœur de la France</h2>
 		<p>
@@ -257,7 +281,7 @@
 		</p>
 	</div>
 
-	<div id="map" bind:this={mapContainer} style="width:100%; height:500px;"></div>
+	<img class="arrow" src="/img/arrow-1.svg" alt="arrow" width="304" height="44" />
 </section>
 
 <section id="equipe">
@@ -279,6 +303,7 @@
 			</div>
 		</li>
 	</ul>
+	<img class="arrow" src="/img/arrow-2.svg" width="89" height="79" alt="arrow" />
 </section>
 
 <section id="contact">
@@ -291,7 +316,8 @@
 		78190 Trappes<br />
 		FRANCE
 	</p>
-	<img id="flag" src="https://cdn.interflux.com/images/flags/FR.svg" alt="flag of France" />
+	<img class="flag" src="https://cdn.interflux.com/images/flags/FR.svg" alt="flag of France" />
+	<img class="arrow" src="/img/arrow-3.svg" width="89" height="170" alt="arrow" />
 </section>
 
 <footer>
@@ -311,6 +337,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		overflow: hidden;
 		img#logo-1 {
 			position: absolute;
 			z-index: 2;
@@ -324,8 +351,10 @@
 			z-index: 1;
 			left: 0;
 			top: 0;
-			width: auto;
+			width: 100%;
 			height: 100%;
+			object-fit: cover;
+			object-position: center;
 		}
 		h1 {
 			position: relative;
@@ -393,7 +422,7 @@
 			display: flex;
 			flex-direction: column;
 			gap: 40px;
-			padding: 150px 0;
+			padding: 120px 0;
 			.text {
 				columns: 2;
 				column-gap: 20px;
@@ -412,7 +441,7 @@
 			display: flex;
 			flex-direction: column;
 			gap: 40px;
-			padding: 150px 0;
+			padding: 120px 0;
 			margin: 0 auto;
 			.text {
 				max-width: 400px;
@@ -432,31 +461,47 @@
 
 	#location {
 		background-color: var(--blue-5);
+		width: 100vw;
 		height: 680px;
 		position: relative;
 		display: flex;
 		flex-direction: column;
 
-		#map {
-			height: 680px;
+		.map {
+			width: 100%;
+			height: 100%;
 		}
 
 		.text {
 			position: absolute;
 			z-index: 1;
-			left: 100px;
-			top: 100px;
+			left: 50%;
+			top: 50%;
+			transform: translate(-360px, -110px);
 			display: flex;
 			flex-direction: column;
-			gap: 20px;
-			max-width: 300px;
+			width: 300px;
+			h2 {
+				width: 220px;
+			}
 			h2,
 			p {
 				color: white;
 			}
+			h2 + p {
+				margin-top: 20px;
+			}
 			p + p {
 				margin-top: 10px;
 			}
+		}
+
+		.arrow {
+			position: absolute;
+			z-index: 2;
+			left: 50%;
+			top: 50%;
+			transform: translate(-140px, -90px);
 		}
 	}
 
@@ -466,11 +511,14 @@
 		align-items: center;
 		padding: 80px 0 100px;
 		gap: 40px;
+		position: relative;
 		ul {
 			list-style: none;
 			display: flex;
 			flex-direction: row;
 			gap: 50px;
+			margin: 0;
+			padding: 0;
 			li {
 				display: flex;
 				align-items: center;
@@ -484,6 +532,13 @@
 				}
 			}
 		}
+		img.arrow {
+			position: absolute;
+			z-index: 1;
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-225px);
+		}
 	}
 
 	#contact {
@@ -492,6 +547,7 @@
 		flex-direction: column;
 		align-items: center;
 		padding: 60px;
+		position: relative;
 		h2,
 		p {
 			color: white;
@@ -509,17 +565,24 @@
 				color: white;
 			}
 		}
-		img {
-			width: 32px;
-			height: 24px;
-			border: 1px solid white;
-			margin-top: 10px;
-		}
 		h2 + p {
 			margin-top: 30px;
 		}
 		p + p {
 			margin-top: 20px;
+		}
+		img.flag {
+			width: 32px;
+			height: 24px;
+			border: 1px solid white;
+			margin-top: 10px;
+		}
+		img.arrow {
+			position: absolute;
+			z-index: 1;
+			left: 50%;
+			top: 0;
+			transform: translateX(-225px);
 		}
 	}
 	footer {
@@ -532,6 +595,17 @@
 			width: auto;
 			height: 70px;
 		}
+	}
+
+	.mapboxgl-canvas-container,
+	.mapboxgl-canvas-container.mapboxgl-interactive,
+	.mapboxgl-canvas {
+		cursor: default !important;
+	}
+
+	/* Also override any inline styles Mapbox might set */
+	:global(.mapboxgl-canvas-container) {
+		cursor: default !important;
 	}
 
 	:global(.mapboxgl-canvas) {
