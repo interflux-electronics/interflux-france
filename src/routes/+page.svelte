@@ -5,13 +5,13 @@
 	import { onMount } from 'svelte';
 	import mapboxgl from 'mapbox-gl';
 	import 'mapbox-gl/dist/mapbox-gl.css';
+	import { PUBLIC_MAPBOX_ACCESSS_TOKEN } from '$env/static/public';
 
 	let mapContainer;
 	let map;
 
 	onMount(() => {
-		mapboxgl.accessToken =
-			'pk.eyJ1IjoianctZmxvYXRwbGFuZS1kZXYiLCJhIjoiY2s4bWNnZnBhMG1lZjNocW9xMTNrZWIyZyJ9.ZIs8xxlge7f8r1aOzstHyQ';
+		mapboxgl.accessToken = PUBLIC_MAPBOX_ACCESSS_TOKEN;
 
 		map = new mapboxgl.Map({
 			container: mapContainer,
