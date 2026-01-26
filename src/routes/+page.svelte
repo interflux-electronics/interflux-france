@@ -445,6 +445,8 @@
 			}
 			img {
 				transform: translateY(1px);
+				width: 4px;
+				height: 6px;
 			}
 		}
 	}
