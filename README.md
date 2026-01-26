@@ -27,9 +27,27 @@ Ask Jan on [jw@interflux.au](mailto:jw@interflux.au)
 ## Development
 
 ```sh
+bun install
 bun run dev --open
 ```
 
 ## Production
 
-TBC
+Build production bundles:
+
+```sh
+bun install
+bun run build
+```
+
+Run Svelte Kit in session (for testing):
+
+```sh
+bun build/index.js
+```
+
+Run Svelte Kit in background with PM2:
+
+```sh
+pm2 start pm2.config.js
+```
