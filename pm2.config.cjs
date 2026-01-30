@@ -3,14 +3,12 @@ module.exports = {
         {
             name: 'interflux-france',
             script: './build/index.js',
+            interpreter: '/home/interflux/.nvm/versions/node/v24.13.0/bin/node',
             instances: 1,
             exec_mode: 'fork',
             autorestart: true,
             watch: false,
-
-            // prevent memory leaks from taking down server
             max_memory_restart: '600M',
-
             env: {
                 NODE_ENV: 'production',
                 PORT: 3000,
