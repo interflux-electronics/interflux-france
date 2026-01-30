@@ -5,7 +5,7 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
     kit: {
         adapter: adapter({
-            envPrefix: 'SK_'
+            envPrefix: 'APP_'
         })
     },
     preprocess: vitePreprocess()
