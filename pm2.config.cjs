@@ -3,8 +3,6 @@ module.exports = {
         {
             name: 'interflux-france',
             script: './build/index.js',
-            interpreter: 'bun', // TODO: may require full path?
-            args: '', // not needed when interpreter is bun
             instances: 1,
             exec_mode: 'fork',
             autorestart: true,
