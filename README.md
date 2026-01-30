@@ -7,11 +7,11 @@ Tech stack:
 * Svelte Kit ❤️
 * Typescript
 * SASS
-* Bun
 * Prettier
 * ES Lint
 * Debian
 * Nginx
+* NVM
 * Node
 * Figma ⭐️
 
@@ -27,27 +27,24 @@ Ask Jan on [jw@interflux.au](mailto:jw@interflux.au)
 ## Development
 
 ```sh
-bun install
-bun run dev --open
+git checkout development
+
+# create `.env.development` file
+
+nvm install
+npm install
+npm run dev --open
 ```
 
 ## Production
 
-Build production bundles:
-
 ```sh
-bun install
-bun run build
-```
+git checkout production
 
-Run Svelte Kit in session (for testing):
+# create `.env.production` file
 
-```sh
-bun build/index.js
-```
-
-Run Svelte Kit in background with PM2:
-
-```sh
-pm2 start pm2.config.js
+nvm install
+npm install
+npm run build
+node build/index.js
 ```
