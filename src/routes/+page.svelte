@@ -123,7 +123,7 @@
 				{/if}
 			</a>
 			<a href="#location" class={inView == 'location' ? 'in-view' : 'out-of-view'}>
-				<span>Location</span>
+				<span>Localisation</span>
 				{#if inView == 'location'}
 					<img src="/img/arrow-5.svg" width="4" height="6" alt="arrow" />
 				{/if}
@@ -377,7 +377,7 @@
 <footer id="footer" use:intersect={{ threshold: tresholds }} on:intersect={onIntersect}>
 	<div class="contact">
 		<h2>Contactez-nous</h2>
-		<p>+31 7 12 34 56 67</p>
+		<p>01.34.82.53.86</p>
 		<p><a href="mailto:d.laprade@interfluxfrance.com">d.laprade@interfluxfrance.com</a></p>
 		<p>
 			Interflux France (SAS, SIREN 391 225 935)<br />
