@@ -1,50 +1,56 @@
 # Interflux France website
 
-This repo is the code base for the website [interfluxfrance.com](https://interfluxfrance.com).
+This codebase builds the frontend of the website of the French company Interflux France.
+
+[interfluxfrance.com](https://interfluxfrance.com).
 
 Tech stack:
 
-* Svelte Kit ❤️
-* Typescript
-* SASS
-* Prettier
-* ES Lint
-* Debian
-* Nginx
-* NVM
-* Node
-* Figma ⭐️
+- Svelte Kit 5 ❤️
+- Typescript
+- SASS
+- Prettier
+- ES Lint
+- Debian
+- Nginx
+- NVM
+- Node
+- Figma ⭐️
 
 Contributors:
 
-* Jan Werkhoven 岩 🏔️
-* Steven Teliszewski 🇧🇪
+- Jan Werkhoven 岩 🇦🇺
+- Daniel Laprade 🇫🇷
+- Steven Teliszewski 🇧🇪
 
 Questions?
 
 Ask Jan on [jw@interflux.au](mailto:jw@interflux.au)
 
-## Development
+# Development
 
 ```sh
-git checkout development
-
-# create `.env.development` file
-
 nvm install
 npm install
-npm run dev --open
+npm run dev
 ```
 
-## Production
+# Production
+
+Deploy
 
 ```sh
-git checkout production
+bin/deploy.sh
+```
 
-# create `.env.production` file
+Deploy manually
 
-nvm install
-npm install
-npm run build
-node build/index.js
+```sh
+ssh paris
+cd /var/www/interfluxfrance.com
+sudo -u interflux bash -lc "git pull"
+sudo -u interflux bash -lc "nvm install"
+sudo -u interflux bash -lc "npm install"
+sudo -u interflux bash -lc "npm run build"
+sudo systemctl restart interfluxfrance.com
 ```
