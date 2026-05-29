@@ -44,7 +44,7 @@
       <Button
         url={resolve('/contact')}
         label="Contactez-nous"
-        icon="email"
+        icon="email-1"
         theme="primary orange"
         size="medium"
       />
@@ -58,7 +58,6 @@
   header {
     position: relative;
     z-index: 3;
-    // transition: all 400ms var(--ease-out-expo);
     background: linear-gradient(90deg, rgba(23, 56, 90, 1) 0.41%, rgba(35, 87, 140, 1) 100%);
 
     &.overlap {
