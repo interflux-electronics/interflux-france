@@ -8,7 +8,7 @@ User=interflux
 WorkingDirectory=/var/www/interfluxfrance.com
 Environment=NODE_ENV=production
 Environment=PORT=3000
-ExecStart=/home/interflux/.nvm/versions/node/v24.13.0/bin/node build/index.js
+ExecStart=/home/interflux/.nvm/versions/node/v24.14.0/bin/node build/index.js
 ExecReload=/bin/kill -TSTP $MAINPID
 Restart=always
 KillMode=process
