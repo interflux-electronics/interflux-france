@@ -1,0 +1,5 @@
+// These SCSS mixins are prepended to the <style> of all components
+// Configured in svelte.config.js
+
+@forward 'mixins/responsive';
+@forward 'mixins/misc';

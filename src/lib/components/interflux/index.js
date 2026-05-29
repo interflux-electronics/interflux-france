@@ -1,1 +1,0 @@
-export { default as ProductTile } from './ProductTile.svelte';
