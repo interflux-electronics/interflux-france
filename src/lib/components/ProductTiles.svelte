@@ -97,7 +97,7 @@
               font-size: vw(26px);
             }
             @include tablet {
-              font-size: 3vw;
+              font-size: 2.5vw;
             }
             @include mobile {
               font-size: 8vw;

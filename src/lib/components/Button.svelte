@@ -225,11 +225,11 @@
         padding: 0 vw-tablet(16px);
       }
       @include mobile {
-        font-size: vw-mobile(16px); // TODO: verify
-        line-height: vw-mobile(34px); // TODO: verify
-        height: vw-mobile(34px); // TODO: verify
-        border-radius: vw-mobile(3px); // TODO: verify
-        padding: 0 vw-mobile(16px); // TODO: verify
+        font-size: vw-mobile(16px);
+        line-height: vw-mobile(34px);
+        height: vw-mobile(34px);
+        border-radius: vw-mobile(3px);
+        padding: 0 vw-mobile(16px);
       }
 
       .icon {
@@ -319,26 +319,6 @@
           0 3px 6px rgba(black, 0.2);
       }
 
-      // :global {
-      //   svg {
-      //     [fill] {
-      //       fill: $grey-5;
-      //     }
-      //   }
-      // }
-
-      // &.white-border {
-      //   border-color: rgba(white, 0.5);
-      //   color: white;
-      //   :global {
-      //     svg {
-      //       [fill] {
-      //         fill: white;
-      //       }
-      //     }
-      //   }
-      // }
-
       &.ghost {
         color: white;
         border-radius: 3px;
@@ -365,64 +345,11 @@
           }
         }
       }
-
-      // &.blue-focus {
-      //   &:hover,
-      //   &:focus {
-      //     color: var(--blue-0);
-      //     border-color: var(--blue-0);
-      //     box-shadow: inset 0 0 0 1px var(--blue-0);
-      //     :global {
-      //       svg {
-      //         [fill] {
-      //           fill: var(--blue-0);
-      //         }
-      //       }
-      //     }
-      //   }
-      //   &:focus {
-      //     box-shadow: 0 0 0 1px var(--blue-0) inset;
-      //   }
-      // }
-
-      // &.orange {
-      //   &:hover,
-      //   &:focus {
-      //     color: var(--orange-1);
-      //     border-color: var(--orange-1);
-      //     :global {
-      //       svg {
-      //         [fill] {
-      //           fill: var(--orange-1);
-      //         }
-      //       }
-      //     }
-      //   }
-      //   &:focus {
-      //     box-shadow: 0 0 0 1px var(--orange-1);
-      //   }
-      // }
     }
 
     &.tertiary {
       padding: 0;
       transition: padding 300ms var(--ease-out-expo);
-
-      // &.blue-text {
-      //   color: var(--blue-0);
-      //   &:focus,
-      //   &:hover {
-      //     outline: 2px solid var(--blue-0);
-      //     outline-offset: 2px;
-      //   }
-      //   :global {
-      //     svg {
-      //       [fill] {
-      //         fill: var(--blue-0);
-      //       }
-      //     }
-      //   }
-      // }
 
       &.ghost {
         color: white;

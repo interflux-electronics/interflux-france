@@ -66,22 +66,10 @@
 
     .image {
       overflow: hidden;
+      cursor: pointer;
 
-      @include widescreen {
-        width: 250px;
-        height: 250px;
-      }
-      @include desktop {
-        width: vw(250px);
-        height: vw(250px);
-      }
-      @include tablet {
-        // TODO
-      }
-      @include mobile {
-        width: 80vw;
-        height: 80vw;
-      }
+      width: 100%;
+      height: 100%;
 
       img {
         width: 100%;
@@ -102,20 +90,31 @@
       }
     }
 
-    h3 {
-      font-size: 16px;
-      line-height: 140%;
-      color: var(--grey-7);
-      text-align: center;
-      padding: 0 10px;
-    }
-
+    h3,
     p {
-      font-size: 16px;
       line-height: 140%;
       color: var(--grey-7);
       text-align: center;
-      padding: 0 10px;
+
+      @include widescreen {
+        font-size: vw(16px);
+        padding: 0 vw(10px);
+      }
+      @include desktop {
+        font-size: 16px;
+        padding: 0 10px;
+      }
+      @include tablet {
+        font-size: vw-tablet(16px);
+        padding: 0 vw-tablet(10vw);
+      }
+      @include mobile {
+        font-size: vw-mobile(16px);
+        padding: 0 vw-mobile(10vw);
+      }
+    }
+    h3 {
+      font-family: var(--bold);
     }
   }
 </style>
