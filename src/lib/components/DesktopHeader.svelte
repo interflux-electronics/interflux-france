@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { PUBLIC_CDN_HOST as cdnHost } from '$env/static/public';
+  import { PUBLIC_CDN_HOST as cdn } from '$env/static/public';
   import { resolve } from '$app/paths';
   import { page } from '$app/state';
   import Button from '$lib/components/Button.svelte';
@@ -12,7 +12,7 @@
     <div class="left">
       <a href={resolve('/')} id="logo">
         <img
-          src="{cdnHost}/images/logos/interflux-france-logo-white.svg"
+          src="{cdn}/images/logos/interflux-france-logo-white.svg"
           width="396"
           height="100"
           alt="Interflux Electronics"

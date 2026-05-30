@@ -1,6 +1,6 @@
 <script lang="ts">
   import Hero from '$lib/components/Hero.svelte';
-  import { PUBLIC_CDN_HOST as cdnHost } from '$env/static/public';
+  import { PUBLIC_CDN_HOST as cdn } from '$env/static/public';
 
   let yearCount = $derived.by(() => {
     const today = new Date();
@@ -43,14 +43,14 @@
 
     <div class="right">
       <img
-        src="{cdnHost}/images/france/circuit-board@857x535.webp"
+        src="{cdn}/images/france/circuit-board@857x535.webp"
         alt="homme regardant des appareils électroniques et utilisant un vissuese"
         width="857"
         height="535"
         class="top"
       />
       <img
-        src="{cdnHost}/images/france/screwdriver@839x549.webp"
+        src="{cdn}/images/france/screwdriver@839x549.webp"
         alt="visseuse électrique pour le montage d'appareils électroniques"
         width="839"
         height="549"

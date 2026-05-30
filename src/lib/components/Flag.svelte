@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { PUBLIC_CDN_HOST as cdnHost } from '$env/static/public';
+  import { PUBLIC_CDN_HOST as cdn } from '$env/static/public';
   import { downcase } from '$lib/helpers/downcase';
   import type { Country } from '$lib/types/Country';
 
@@ -12,7 +12,7 @@
 </script>
 
 <img
-  src="{cdnHost}/images/flags/{country.id}.svg"
+  src="{cdn}/images/flags/{country.id}.svg"
   alt="{country.nameNative} ({country.nameEnglish})"
   class="flag {downcase(country.id)} {size}"
   width="32"

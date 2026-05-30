@@ -4,7 +4,7 @@
   import Line from '$lib/components/Line.svelte';
   import ProductTile from '$lib/components/ProductTile.svelte';
   import ProductTiles from '$lib/components/ProductTiles.svelte';
-  import { PUBLIC_CDN_HOST as cdnHost } from '$env/static/public';
+  import { PUBLIC_CDN_HOST as cdn } from '$env/static/public';
 </script>
 
 <Hero theme="selective" h1="Produits de brasage pour l'industrie électronique" />
@@ -110,12 +110,17 @@
         Pour obtenir des informations détaillées sur les produits et les variantes que nous
         proposons en France, veuillez télécharger notre catalogue.
       </p>
-      <Button size="medium" theme="primary green" label="Téléchargez le catalogue" />
+      <Button
+        size="medium"
+        theme="primary green"
+        label="Téléchargez le catalogue"
+        url="{cdn}/documents/catalogs/catalogue-produits-de-brasage-Interflux-FR.pdf"
+      />
     </div>
 
     <div class="right">
       <img
-        src="{cdnHost}/images/france/circuit-board@857x535.webp"
+        src="{cdn}/images/france/circuit-board@857x535.webp"
         alt="homme regardant des appareils électroniques et utilisant un vissuese"
         width="857"
         height="535"

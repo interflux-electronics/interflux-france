@@ -4,7 +4,7 @@
   import Button from '$lib/components/Button.svelte';
   import ProductTile from '$lib/components/ProductTile.svelte';
   import ProductTiles from '$lib/components/ProductTiles.svelte';
-  import { PUBLIC_CDN_HOST as cdnHost } from '$env/static/public';
+  import { PUBLIC_CDN_HOST as cdn } from '$env/static/public';
 </script>
 
 <Hero h1="Visseuses électriques de précision pour l'industrie" theme="screwdriver" />
@@ -92,12 +92,17 @@
         Pour obtenir des informations détaillées sur les produits et les variantes que nous
         proposons en France, veuillez télécharger notre catalogue.
       </p>
-      <Button size="medium" theme="primary green" label="Téléchargez le catalogue" />
+      <Button
+        size="medium"
+        theme="primary green"
+        label="Téléchargez le catalogue"
+        url="{cdn}/documents/catalogs/catalogue-visseuses-électriques-FR.pdf"
+      />
     </div>
 
     <div class="right">
       <img
-        src="{cdnHost}/images/france/screwdriver@839x549.webp"
+        src="{cdn}/images/france/screwdriver@839x549.webp"
         alt="visseuse électrique pour le montage d'appareils électroniques"
         width="839"
         height="549"
