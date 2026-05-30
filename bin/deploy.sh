@@ -3,7 +3,7 @@
 set -eou pipefail
 
 echo "----------"
-echo "⛵️ deploying ..."
+echo "⛵️ deploying to server in Paris ..."
 echo "----------"
 scp bin/deploy-remote.sh paris:~/
 echo "----------"

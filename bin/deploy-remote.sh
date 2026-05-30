@@ -21,7 +21,9 @@ echo "----------"
 echo "✅ npm install"
 echo "----------"
 
-sudo -u interflux bash -lc "npm run build"
+# Runs into memory issues
+# sudo -u interflux bash -lc "npm run build"
+sudo -u interflux bash -lc "NODE_OPTIONS=--max-old-space-size=4096 npm run build"
 
 echo "----------"
 echo "✅ npm run build"
