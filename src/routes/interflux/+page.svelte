@@ -2,6 +2,7 @@
   import Button from '$lib/components/Button.svelte';
   import Hero from '$lib/components/Hero.svelte';
   import Line from '$lib/components/Line.svelte';
+  import Link from '$lib/components/Link.svelte';
   import ProductTile from '$lib/components/ProductTile.svelte';
   import ProductTiles from '$lib/components/ProductTiles.svelte';
   import { PUBLIC_CDN_HOST as cdn } from '$env/static/public';
@@ -30,7 +31,7 @@
         fabrication électronique.
       </p>
 
-      <p>Vers le site web: <a href="https://interflux.fr">www.interflux.fr</a></p>
+      <p>Vers le site web: <Link url="https://interflux.fr" label="www.interflux.fr" /></p>
     </div>
 
     <div class="product-tiles">

@@ -42,11 +42,12 @@
     ].join(' ')
   );
 
-  let rel = $derived(url && url.startsWith('/') ? undefined : 'external');
+  let rel = $derived(url && url.startsWith('/') ? undefined : 'external noopener noreferrer');
   let target = $derived(url && url.startsWith('/') ? undefined : '_blank');
 </script>
 
 {#if url}
+  <!-- eslint-disable svelte/no-navigation-without-resolve  -->
   <a href={url} {id} class={classNames} {rel} {target} onclick={onClick}>
     {#if icon}
       <div class="icon">
