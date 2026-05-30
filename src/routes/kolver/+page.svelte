@@ -31,43 +31,48 @@
       <ProductTile
         href="https://kolver.com/en/products/kducer-series"
         src="/img/kolver-product-1.jpg"
-        h="K-DUCER Series"
+        h="K-DUCER série"
         p="Plage de couple : 0,05 - 70 Nm"
       />
       <ProductTile
         href="https://kolver.com/en/products/pluto-mito-nato-series"
         src="/img/kolver-product-2.jpg"
-        h="PLUTO, MITO & NATO Series"
+        h="PLUTO, MITO & NATO série"
         p="Plage de couple : 0,02 - 70 Nm"
       />
       <ProductTile
         href="https://kolver.com/en/products/ca-series"
         src="/img/kolver-product-3.jpg"
-        h="CA Series"
+        h="CA série"
         p="Plage de couple : 0,015 - 70 Nm"
       />
       <ProductTile
         href="https://kolver.com/en/products/fab-raf-series"
         src="/img/kolver-product-4.jpg"
-        h="FAB & RAF Series"
+        h="FAB & RAF série"
         p="Plage de couple : 0,05 - 5,0 Nm"
       />
       <ProductTile
         href="https://kolver.com/en/products/kbl-brushless-series"
         src="/img/kolver-product-5.jpg"
-        h="KBL BRUSHLESS Series"
+        h="KBL BRUSHLESS série"
         p="Plage de couple : 0,04 - 4 Nm"
       />
       <ProductTile
         href="https://kolver.com/en/products/torque-testers"
         src="/img/kolver-product-6.jpg"
-        h="Torque testers"
-        p="Plage de couple : ,05 - 100 Nm"
+        h="Contrôleurs de couple"
+        p="Etendue de mesure de 0.05 - 100 Nm"
       />
-      <ProductTile
+      <!-- <ProductTile
         href="https://kolver.com/en/products/reaction-positioning-arms"
         src="/img/kolver-product-7.jpg"
-        h="Reaction & positioning arms"
+        h="Distributeurs automatique de vis"
+      /> -->
+      <ProductTile
+        href="https://kolver.com/en/products/automatic-screw-suppliers"
+        src="/img/kolver-product-8.jpg"
+        h="Distributeurs automatique de vis"
       />
       <ProductTile href="https://www.interflux-vissage.com" css="orange">
         <p>vers le site web</p>
