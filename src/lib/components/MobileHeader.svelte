@@ -97,7 +97,7 @@
   .placeholder {
     background-color: var(--blue-5);
     @include tablet {
-      height: 14vw;
+      height: 9vw;
     }
     @include mobile {
       height: 18vw;

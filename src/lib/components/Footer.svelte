@@ -49,12 +49,13 @@
       gap: vw(30px);
     }
     @include tablet {
-      // TODO
+      height: 10vw;
+      gap: 2vw;
     }
     @include mobile {
       flex-direction: column;
-      gap: 1vw;
-      padding: 5vw;
+      gap: 0.5vw;
+      padding: 7vw;
     }
     .left,
     .right {
@@ -67,16 +68,16 @@
       display: flex;
       align-items: center;
       @include widescreen {
-        justify-content: flex-start;
+        justify-content: flex-end;
       }
       @include desktop {
-        justify-content: flex-start;
+        justify-content: flex-end;
       }
       @include tablet {
-        justify-content: center; // TODO
+        justify-content: flex-end;
       }
       @include mobile {
-        justify-content: center; // TODO
+        justify-content: center;
       }
     }
     .center {
@@ -85,9 +86,21 @@
       }
       img {
         flex-shrink: 0;
-        width: 86px;
-        height: 60px;
         aspect-ratio: 43/30;
+        @include widescreen {
+          width: 86px;
+          height: 60px;
+        }
+        @include desktop {
+          width: vw(86px);
+          height: vw(60px);
+        }
+        @include tablet {
+          width: 8vw;
+        }
+        @include mobile {
+          height: 12vw;
+        }
       }
     }
     .right {
@@ -100,10 +113,10 @@
         justify-content: flex-start;
       }
       @include tablet {
-        justify-content: center; // TODO
+        justify-content: flex-start;
       }
       @include mobile {
-        justify-content: center; // TODO
+        justify-content: center;
       }
       a {
         background-color: transparent;
@@ -116,11 +129,26 @@
         }
       }
       img {
-        width: 20px;
-        height: 20px;
         aspect-ratio: 1/1;
         margin-left: 7px;
-        transform: translateY(-4px);
+        @include widescreen {
+          width: 20px;
+          height: 20px;
+          transform: translateY(vw(-4px));
+        }
+        @include desktop {
+          width: vw(20px);
+          height: vw(20px);
+          transform: translateY(vw(-4px));
+        }
+        @include tablet {
+          width: 2.5vw;
+          height: 2.5vw;
+        }
+        @include mobile {
+          width: 5vw;
+          height: 5vw;
+        }
       }
     }
   }

@@ -74,6 +74,10 @@
       gap: vw(120px);
     }
     @include tablet {
+      padding: 10vw 0 2vw;
+      gap: 0vw;
+      width: 70vw;
+      flex-direction: column;
     }
     @include mobile {
       padding: 15vw 0;
@@ -94,6 +98,7 @@
       font-size: vw(32px);
     }
     @include tablet {
+      font-size: 4vw;
     }
     @include mobile {
       font-size: 8vw;
@@ -113,6 +118,7 @@
       gap: vw(20px);
     }
     @include tablet {
+      gap: 3vw;
     }
     @include mobile {
       gap: 10vw;
@@ -132,6 +138,9 @@
         transform: translate(-30px, 30px);
       }
       @include tablet {
+        width: 70vw;
+        height: auto;
+        transform: translateY(vw(140vw));
       }
       @include mobile {
         width: 90vw;
@@ -151,6 +160,8 @@
         transform: translateY(vw(-30px));
       }
       @include tablet {
+        width: 70vw;
+        height: auto;
       }
       @include mobile {
         width: 90vw;

@@ -145,14 +145,6 @@
     align-items: center;
     justify-content: space-between;
 
-    @include widescreen {
-      flex-direction: row;
-    }
-    @include desktop {
-      flex-direction: row;
-    }
-    @include tablet {
-    }
     @include mobile {
       flex-direction: column;
     }
@@ -171,6 +163,10 @@
       height: 100%;
     }
     @include tablet {
+      position: absolute;
+      z-index: 0;
+      width: 100vw;
+      height: 100%;
     }
     @include mobile {
       width: 100vw;
@@ -192,6 +188,9 @@
       gap: vw(20px);
     }
     @include tablet {
+      width: 33vw;
+      margin-left: 5vw;
+      gap: 3vw;
     }
     @include mobile {
       box-sizing: border-box;
@@ -230,6 +229,12 @@
       box-shadow: 0 vw(8px) vw(16px) 0 rgba(black, 0.25);
     }
     @include tablet {
+      width: 32vw;
+      padding: 2.5vw;
+      margin-right: 2vw;
+      gap: 2vw;
+      border-radius: 1vw;
+      box-shadow: 0 vw(8px) vw(16px) 0 rgba(black, 0.25);
     }
     @include mobile {
       width: 100vw;

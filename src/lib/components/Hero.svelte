@@ -82,7 +82,7 @@
           }
         }
         @include tablet {
-          background-image: url('#{$cdn}/images/france/hero-1-tablet@900x420.webp');
+          background-image: url('#{$cdn}/images/france/hero-1-tablet@900x440.webp');
         }
         @include mobile {
           background-image: url('#{$cdn}/images/france/hero-1-mobile@600x600.webp');
@@ -110,7 +110,7 @@
           }
         }
         @include tablet {
-          background-image: url('#{$cdn}/images/france/hero-2-tablet@2400x640.webp');
+          background-image: url('#{$cdn}/images/france/hero-2-tablet@900x440.webp');
         }
         @include mobile {
           background-image: url('#{$cdn}/images/france/hero-2-mobile@600x600.webp');
@@ -138,7 +138,7 @@
           }
         }
         @include tablet {
-          background-image: url('#{$cdn}/images/france/hero-3-tablet@900x420.webp');
+          background-image: url('#{$cdn}/images/france/hero-3-tablet@900x440.webp');
         }
         @include mobile {
           background-image: url('#{$cdn}/images/france/hero-3-mobile@600x600.webp');
@@ -177,8 +177,8 @@
         background-attachment: fixed;
         background-size: 100% auto;
         @include tablet {
-          background-size: 100vw;
-          // TODO
+          background-size: 100vw auto;
+          background-position-y: 9vw;
         }
         @include mobile {
           background-size: 100vw auto;
@@ -202,10 +202,11 @@
         max-width: vw(400px);
       }
       @include tablet {
-        font-size: vw-tablet(30px);
+        font-size: 3.6vw;
+        max-width: 60vw;
       }
       @include mobile {
-        font-size: vw-mobile(30px);
+        font-size: 7vw;
         max-width: 90vw;
       }
       :global {

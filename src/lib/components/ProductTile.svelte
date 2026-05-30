@@ -39,7 +39,6 @@
     border-radius: 5px;
     overflow: hidden;
     border: 1px solid var(--grey-1);
-    min-height: 250px;
 
     @include widescreen {
       min-height: 250px;
@@ -48,6 +47,7 @@
       min-height: vw(250px);
     }
     @include tablet {
+      min-height: 25vw;
     }
     @include mobile {
       width: 80vw;

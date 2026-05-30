@@ -145,6 +145,7 @@
       padding: vw(100px) 0;
     }
     @include tablet {
+      max-width: 80vw;
     }
     @include mobile {
       padding: 10vw;
@@ -181,7 +182,9 @@
         gap: vw(20px);
       }
       @include tablet {
-        flex-direction: column;
+        flex-direction: row;
+        gap: 5vw;
+        width: 90vw;
       }
       @include mobile {
         flex-direction: column;
@@ -203,6 +206,9 @@
         gap: vw(20px);
       }
       @include tablet {
+        flex-shrink: 0;
+        width: 33vw;
+        gap: 2vw;
       }
       @include mobile {
         gap: 3vw;
@@ -217,6 +223,7 @@
         width: vw(428.5px);
       }
       @include tablet {
+        width: 100%;
       }
       @include mobile {
         width: 90vw;

@@ -29,7 +29,9 @@
       gap: vw(22px);
     }
     @include tablet {
-      // TODO
+      grid-template-columns: repeat(3, 1fr);
+      width: 80vw;
+      gap: 2vw;
     }
     @include mobile {
       grid-template-columns: repeat(1, 1fr);
@@ -54,7 +56,8 @@
               height: vw(250px);
             }
             @include tablet {
-              // TODO
+              width: 25vw;
+              height: 25vw;
             }
             @include mobile {
               width: 100%;
@@ -94,6 +97,7 @@
               font-size: vw(26px);
             }
             @include tablet {
+              font-size: 3vw;
             }
             @include mobile {
               font-size: 8vw;

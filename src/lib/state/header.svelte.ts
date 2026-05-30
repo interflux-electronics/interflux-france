@@ -1,5 +1,5 @@
 export const header = $state({
-  title: 'Interflux',
+  title: 'Interflux France',
   crumbs: [],
   backPath: '/',
   visible: true,

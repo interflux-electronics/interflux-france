@@ -44,9 +44,9 @@
       padding-bottom: vw(80px);
     }
     @include tablet {
-      flex-direction: row; // TODO
-      padding: 4vw; // TODO
-      gap: 4vw; // TODO
+      flex-direction: row;
+      padding: 4vw;
+      gap: 2vw;
     }
     @include mobile {
       flex-direction: column;
@@ -57,15 +57,31 @@
   a {
     background-color: white;
     border-radius: 10px;
-    padding: 30px;
     box-shadow: 0 5px 12px 0 rgba(black, 0.15);
     display: flex;
     flex-direction: column;
-    gap: 30px;
     align-items: center;
     transition-property: all;
     transition-duration: 300ms;
     transition-timing-function: var(--ease-out-expo);
+
+    @include widescreen {
+      padding: 30px;
+      gap: 30px;
+    }
+    @include desktop {
+      padding: vw(30px);
+      gap: vw(30px);
+    }
+    @include tablet {
+      padding: 4vw 2vw;
+      gap: 4vw;
+    }
+    @include mobile {
+      padding: 10vw 4vw;
+      gap: 10vw;
+    }
+
     img {
       aspect-ratio: 1/1;
 
@@ -78,8 +94,8 @@
         height: vw(344px);
       }
       @include tablet {
-        width: 100%; // TODO
-        height: auto; // TODO
+        width: 100%;
+        height: auto;
       }
       @include mobile {
         width: 100%;
@@ -97,5 +113,18 @@
     font-family: var(--regular);
     font-size: 18px;
     line-height: 100%;
+
+    @include widescreen {
+      font-size: 18px;
+    }
+    @include desktop {
+      font-size: vw(18px);
+    }
+    @include tablet {
+      font-size: 2.5vw;
+    }
+    @include mobile {
+      font-size: 5vw;
+    }
   }
 </style>
