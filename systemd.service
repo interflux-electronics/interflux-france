@@ -8,9 +8,11 @@ User=interflux
 WorkingDirectory=/var/www/interfluxfrance.com
 Environment=NODE_ENV=production
 Environment=PORT=3000
+ExecStartPre=/bin/sleep 2
 ExecStart=/home/interflux/.nvm/versions/node/v24.14.0/bin/node build/index.js
 ExecReload=/bin/kill -TSTP $MAINPID
 Restart=always
+RestartSec=2
 KillMode=process
 StandardOutput=append:/var/log/interfluxfrance.com/systemd-stdout.log
 StandardError=append:/var/log/interfluxfrance.com/systemd-stderr.log

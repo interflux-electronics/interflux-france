@@ -29,6 +29,7 @@ echo "----------"
 echo "✅ npm run build"
 echo "----------"
 
+sudo systemctl daemon-reload
 sudo systemctl restart interfluxfrance.com
 sudo systemctl status interfluxfrance.com --no-pager
 
