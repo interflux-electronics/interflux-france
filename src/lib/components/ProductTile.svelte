@@ -14,7 +14,7 @@
   let { href, src, alt, h, p, css, children }: Props = $props();
 </script>
 
-<a {href} rel="external" class="product-tile {css}">
+<a {href} rel="external" target="_blank" class="product-tile {css}">
   {#if src}
     <div class="image">
       <img {src} alt={h || alt} />
