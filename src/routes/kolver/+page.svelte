@@ -9,7 +9,7 @@
 
 <Hero h1="Visseuses électriques de précision pour l'industrie" theme="screwdriver" />
 
-<section id="products">
+<section id="intro">
   <div class="liner">
     <h2 class="h2">Kolver</h2>
 
@@ -107,10 +107,14 @@
     padding: 100px 0;
     display: flex;
   }
-  #products {
+  #intro {
     .liner {
       flex-direction: column;
       gap: 40px;
+    }
+    .text {
+      column-count: 2;
+      column-gap: 20px;
     }
   }
   #catalog {

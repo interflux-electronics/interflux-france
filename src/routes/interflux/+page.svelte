@@ -9,7 +9,7 @@
 
 <Hero theme="selective" h1="Produits de brasage pour l'industrie électronique" />
 
-<section id="products">
+<section id="intro">
   <div class="liner">
     <h2 class="h2">Interflux Electronics</h2>
 
@@ -17,13 +17,10 @@
       <p>
         <strong>Interflux Electronics</strong>
         est une entreprise belge (Gand) fondée en 1980. Elle fournit à l'industrie électronique ses produits
-        de brasage dans plus de 80 pays via 14 sociétés à travers le monde.
-      </p>
-
-      <p>
-        Elle est spécialisée dans la recherche, le développement et la fabrication de produits
-        chimiques de brasage de haute qualité pour l'industrie électronique : flux de brasage,
-        crèmes à braser, fils à braser, alliages de brasage et systèmes d'application de flux.
+        de brasage dans plus de 80 pays via 14 sociétés à travers le monde. Elle est spécialisée dans
+        la recherche, le développement et la fabrication de produits chimiques de brasage de haute qualité
+        pour l'industrie électronique : flux de brasage, crèmes à braser, fils à braser, alliages de brasage
+        et systèmes d'application de flux.
       </p>
 
       <p>
@@ -133,10 +130,14 @@
     padding: 100px 0;
     display: flex;
   }
-  #products {
+  #intro {
     .liner {
       flex-direction: column;
       gap: 40px;
+    }
+    .text {
+      column-count: 2;
+      column-gap: 20px;
     }
   }
   #catalog {
