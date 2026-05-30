@@ -47,49 +47,49 @@
           href="https://interflux.fr/product/IF-2005M"
           src="https://cdn.interflux.com/images/products/IF-2005M/IF-2005M-10L-angle@600x600.webp"
           h="IF 2005M"
-          p="Flux de brasage No-Residue"
+          p="Flux de brasage à base de solvants"
         />
 
         <ProductTile
-          href="https://interflux.fr/product/PacIFic-2009M"
-          src="https://cdn.interflux.com/images/products/PacIFic-2009M/Pacific-2009M-10L-angle@600x600.webp"
-          h="PacIFic 2009M"
-          p="Flux de brasage à base d'eau polyvalent"
+          href="https://interflux.fr/product/IF-2005C"
+          src="https://cdn.interflux.com/images/products/IF-2005C/IF-2005C-1L@600x600.webp"
+          h="IF 2005C"
+          p="Flux de brasage à base de solvants"
         />
 
         <ProductTile
           href="https://interflux.fr/product/DP-5505"
           src="https://cdn.interflux.com/images/products/DP-5505/DP-5505-solder-paste-SnAgCu-500g@600x600.webp"
           h="DP 5505"
-          p="Crème à braser haute stabilité"
+          p="Crème à braser avec plomb et sans plomb"
         />
 
         <ProductTile
           href="https://interflux.fr/product/LMPA-Q7"
-          src="https://cdn.interflux.com/images/products/LMPA-Q7/LMPA-Q7-1kg-cartridge@600x600.webp"
+          src="https://cdn.interflux.com/images/products/LMPA-Q7/LMPA-Q7-500g@600x600.webp"
           h="LMPA Q7"
-          p="Crême à braser á bas point de fusion"
+          p="Crème à braser sans plomb à bas point de fusion"
         />
 
         <ProductTile
           href="https://interflux.fr/product/IF-14"
           src="https://cdn.interflux.com/images/products/IF-14/IF-14-SnQ-500g@600x600.webp"
           h="IF 14"
-          p="Fil de brasage populaire"
+          p="Fil à braser avec plomb et sans plomb"
         />
 
         <ProductTile
           href="https://interflux.fr/product/Purgel"
           src="https://cdn.interflux.com/images/products/Purgel/Purgel-3@600x600.webp"
           h="Purgel"
-          p="Nettoyeur pour les systèmes de dosage"
+          p="Nettoyant pour les systèmes de dosage"
         />
 
         <ProductTile
           href="https://interflux.fr/product/Solder-Bars"
           src="https://cdn.interflux.com/images/products/Solder-Bars/Solder-Bars-15@600x600.webp"
-          h="Solder Bars"
-          p="Solder alloy LMPA-Q"
+          h="Alliage en barres"
+          p="Alliage sans plomb à bas point de fusion LMPA-Q"
         />
 
         <ProductTile href="https://interflux.fr" css="orange">

@@ -97,12 +97,12 @@
       text-align: center;
 
       @include widescreen {
-        font-size: vw(16px);
-        padding: 0 vw(10px);
-      }
-      @include desktop {
         font-size: 16px;
         padding: 0 10px;
+      }
+      @include desktop {
+        font-size: vw(16px);
+        padding: 0 vw(10px);
       }
       @include tablet {
         font-size: vw-tablet(16px);
