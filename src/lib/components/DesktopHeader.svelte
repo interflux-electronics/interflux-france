@@ -22,13 +22,13 @@
 
     <ul class="center">
       <li id="brasage">
-        <a href={resolve('/brasage')}>
+        <a href={resolve('/interflux')}>
           <span>Produits de brasage</span>
         </a>
       </li>
 
       <li id="visseuses">
-        <a href={resolve('/visseuses')}>
+        <a href={resolve('/kolver')}>
           <span>Visseuses électriques</span>
         </a>
       </li>

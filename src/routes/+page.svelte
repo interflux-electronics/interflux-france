@@ -6,13 +6,13 @@
 
 <section>
   <div class="liner">
-    <a href={resolve('/brasage')}>
+    <a href={resolve('/interflux')}>
       <h2>Produits de brasage</h2>
       <img src="{cdn}/images/france/products-interflux@688x688.webp" alt="Interflux Electronics" />
       <Button size="medium" theme="primary green" label="en savoir plus" />
     </a>
 
-    <a href={resolve('/visseuses')}>
+    <a href={resolve('/kolver')}>
       <h2>Visseuses électriques</h2>
       <img src="{cdn}/images/france/products-kolver@688x688.webp" alt="Kolver" />
       <Button size="medium" theme="primary green" label="en savoir plus" />
