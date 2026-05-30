@@ -192,19 +192,21 @@
       font-family: var(--extra-bold);
       color: white;
       line-height: 160%;
-      max-width: 400px;
       text-align: center;
       @include widescreen {
         font-size: 30px;
+        max-width: 400px;
       }
       @include desktop {
         font-size: vw(30px);
+        max-width: vw(400px);
       }
       @include tablet {
         font-size: vw-tablet(30px);
       }
       @include mobile {
         font-size: vw-mobile(30px);
+        max-width: 90vw;
       }
       :global {
         nobr {

@@ -26,7 +26,6 @@
   ];
 
   function centerOnFrance() {
-    console.log('✝️');
     map.fitBounds(franceBounds, {
       duration: 3200
     });
@@ -143,23 +142,62 @@
     height: 100%;
     position: relative;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    @include widescreen {
+      flex-direction: row;
+    }
+    @include desktop {
+      flex-direction: row;
+    }
+    @include tablet {
+    }
+    @include mobile {
+      flex-direction: column;
+    }
   }
   #map {
-    position: absolute;
-    width: 100vw;
-    height: 100%;
-    z-index: 0;
+    @include widescreen {
+      position: absolute;
+      z-index: 0;
+      width: 100vw;
+      height: 100%;
+    }
+    @include desktop {
+      position: absolute;
+      z-index: 0;
+      width: 100vw;
+      height: 100%;
+    }
+    @include tablet {
+    }
+    @include mobile {
+      width: 100vw;
+      height: 100vw;
+    }
   }
   .left {
     z-index: 1;
-    width: 300px;
-    margin-left: 80px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    @include widescreen {
+      width: 300px;
+      margin-left: 80px;
+      gap: 20px;
+    }
+    @include desktop {
+      width: vw(300px);
+      margin-left: vw(80px);
+      gap: vw(20px);
+    }
+    @include tablet {
+    }
+    @include mobile {
+      box-sizing: border-box;
+      padding: 20vw 10vw;
+      gap: 3vw;
+    }
     h2 {
       color: white;
     }
@@ -168,18 +206,38 @@
     }
   }
   .right {
-    margin-right: 80px;
     z-index: 1;
     display: flex;
-    padding: 30px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
-    border-radius: 10px;
     background: white;
-    width: 265px;
     background: #fff;
-    box-shadow: 0 8px 16px 0 rgba(black, 0.25);
+
+    @include widescreen {
+      width: 265px;
+      padding: 30px;
+      margin-right: 80px;
+      gap: 24px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px 0 rgba(black, 0.25);
+    }
+    @include desktop {
+      width: vw(265px);
+      padding: vw(30px);
+      margin-right: vw(80px);
+      gap: vw(24px);
+      border-radius: vw(10px);
+      box-shadow: 0 vw(8px) vw(16px) 0 rgba(black, 0.25);
+    }
+    @include tablet {
+    }
+    @include mobile {
+      width: 100vw;
+      padding: 20vw 10vw;
+      box-sizing: border-box;
+      gap: 6vw;
+    }
+
     h2 {
       color: var(--blue-3, #23578c);
       font-family: var(--extra-bold);

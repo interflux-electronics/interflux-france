@@ -63,35 +63,99 @@
 <style lang="scss">
   .liner {
     display: flex;
-    gap: 120px;
     align-items: center;
     justify-content: center;
-    padding: 100px 0;
+    @include widescreen {
+      padding: 100px 0;
+      gap: 120px;
+    }
+    @include desktop {
+      padding: vw(100px) 0;
+      gap: vw(120px);
+    }
+    @include tablet {
+    }
+    @include mobile {
+      padding: 15vw 0;
+      width: 90vw;
+      flex-direction: column;
+    }
   }
 
   h2 {
-    font-size: 32px;
     line-height: 140%;
-    width: 314px;
+
+    @include widescreen {
+      width: 314px;
+      font-size: 32px;
+    }
+    @include desktop {
+      width: vw(314px);
+      font-size: vw(32px);
+    }
+    @include tablet {
+    }
+    @include mobile {
+      font-size: 8vw;
+    }
   }
 
   .left {
-    width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+
+    @include widescreen {
+      width: 400px;
+      gap: 20px;
+    }
+    @include desktop {
+      width: vw(400px);
+      gap: vw(20px);
+    }
+    @include tablet {
+    }
+    @include mobile {
+      gap: 10vw;
+    }
   }
 
   .right {
     img.top {
-      width: 428.5px;
-      height: 267.5px;
-      transform: translate(-30px, 30px);
+      @include widescreen {
+        width: 428.5px;
+        height: 267.5px;
+        transform: translate(-30px, 30px);
+      }
+      @include desktop {
+        width: 428.5px;
+        height: 267.5px;
+        transform: translate(-30px, 30px);
+      }
+      @include tablet {
+      }
+      @include mobile {
+        width: 90vw;
+        height: auto;
+        transform: translateY(vw(140vw));
+      }
     }
     img.bottom {
-      width: 419.5px;
-      height: 274.5px;
-      transform: translate(0, -30px);
+      @include widescreen {
+        width: vw(419.5px);
+        height: vw(274.5px);
+        transform: translateY(vw(-30px));
+      }
+      @include desktop {
+        width: vw(419.5px);
+        height: vw(274.5px);
+        transform: translateY(vw(-30px));
+      }
+      @include tablet {
+      }
+      @include mobile {
+        width: 90vw;
+        height: auto;
+      }
     }
   }
 </style>
