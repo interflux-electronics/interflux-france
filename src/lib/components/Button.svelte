@@ -3,8 +3,6 @@
   import type { Snippet } from 'svelte';
   import type { Icon } from '$lib/types/Icon';
 
-  // legacy tertiary orange
-
   interface Props {
     label?: string;
     size?: 'medium' | 'large' | 'no-size';
@@ -43,10 +41,13 @@
       classNamePassedIn
     ].join(' ')
   );
+
+  let rel = $derived(url && url.startsWith('/') ? undefined : 'external');
+  let target = $derived(url && url.startsWith('/') ? undefined : '_blank');
 </script>
 
 {#if url}
-  <a href={url} class={classNames} {id} onclick={onClick}>
+  <a href={url} {id} class={classNames} {rel} {target} onclick={onClick}>
     {#if icon}
       <div class="icon">
         <Svg name={icon} />
@@ -80,8 +81,6 @@
 {/if}
 
 <style lang="scss">
-  // @use '$lib/styles/components' as *;
-
   .button {
     display: flex;
     align-items: center;
