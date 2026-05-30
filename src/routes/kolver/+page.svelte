@@ -7,7 +7,7 @@
   import { PUBLIC_CDN_HOST as cdn } from '$env/static/public';
 </script>
 
-<Hero h1="Visseuses électriques de précision pour l'industrie" theme="screwdriver" />
+<Hero h1="Visseuses électriques de précision pour l'industrie" theme="two" />
 
 <section id="intro">
   <div class="liner">
@@ -116,6 +116,21 @@
     max-width: 800px;
     padding: 100px 0;
     display: flex;
+
+    @include widescreen {
+      max-width: 800px;
+      padding: 100px 0;
+    }
+    @include desktop {
+      max-width: vw(800px);
+      padding: vw(100px) 0;
+    }
+    @include tablet {
+    }
+    @include mobile {
+      padding: 10vw;
+      box-sizing: border-box;
+    }
   }
   #intro {
     .liner {
@@ -123,28 +138,70 @@
       gap: 40px;
     }
     .text {
-      column-count: 2;
-      column-gap: 20px;
+      @include widescreen {
+        column-count: 2;
+        column-gap: 20px;
+      }
+      @include desktop {
+        column-count: 2;
+        column-gap: vw(20px);
+      }
     }
   }
   #catalog {
     .liner {
-      flex-direction: row;
-      gap: 20px;
       justify-content: center;
       align-items: center;
+
+      @include widescreen {
+        flex-direction: row;
+        gap: 20px;
+      }
+      @include desktop {
+        flex-direction: row;
+        gap: vw(20px);
+      }
+      @include tablet {
+        flex-direction: column;
+      }
+      @include mobile {
+        flex-direction: column;
+        gap: 15vw;
+      }
     }
     .left {
-      width: 390px;
       display: flex;
       flex-direction: column;
-      gap: 20px;
       justify-content: flex-start;
       align-items: flex-start;
+
+      @include widescreen {
+        width: 390px;
+        gap: 20px;
+      }
+      @include desktop {
+        width: vw(390px);
+        gap: vw(20px);
+      }
+      @include tablet {
+      }
+      @include mobile {
+        gap: 3vw;
+      }
     }
     img {
-      width: 419.5px;
-      height: 274.5px;
+      height: auto;
+      @include widescreen {
+        width: 419.5px;
+      }
+      @include desktop {
+        width: vw(419.5px);
+      }
+      @include tablet {
+      }
+      @include mobile {
+        width: 90vw;
+      }
     }
   }
 </style>

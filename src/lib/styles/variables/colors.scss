@@ -23,16 +23,20 @@
   --grey-5: #85878f;
   --grey-6: #6d6f78;
   --grey-7: #3c3f4b; // paragraphs
-  
+
   --green-1: #52996f;
   --green-2: #398451; // CTA & buttons
   --green-3: #2e6b41;
-  
+
   --red-1: #fc5d5d; // errors
-  
+
   // HSL conversions for adding transparency
-  
+
   --blue-4-hsl: hsl(211, 59%, 28%);
   --blue-5-hsl: hsl(210, 61%, 22%);
   --green-3-hsl: hsl(139, 40%, 30%);
+
+  // RGB conversions for adding transparency
+
+  --blue-5-rgb: 22 56 90;
 }

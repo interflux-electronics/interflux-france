@@ -8,7 +8,7 @@
   });
 </script>
 
-<Hero h1="Partenaire de confiance de l'industrie en France" theme="processor" />
+<Hero h1="Partenaire de confiance de l'industrie en France" theme="three" />
 
 <section id="service">
   <div class="liner">

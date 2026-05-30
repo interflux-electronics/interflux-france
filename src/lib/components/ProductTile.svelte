@@ -41,6 +41,19 @@
     border: 1px solid var(--grey-1);
     min-height: 250px;
 
+    @include widescreen {
+      min-height: 250px;
+    }
+    @include desktop {
+      min-height: vw(250px);
+    }
+    @include tablet {
+    }
+    @include mobile {
+      width: 80vw;
+      min-height: 80vw;
+    }
+
     &:hover,
     &:focus {
       border-color: var(--grey-2);
@@ -52,9 +65,23 @@
     }
 
     .image {
-      width: 250px;
-      height: 250px;
       overflow: hidden;
+
+      @include widescreen {
+        width: 250px;
+        height: 250px;
+      }
+      @include desktop {
+        width: vw(250px);
+        height: vw(250px);
+      }
+      @include tablet {
+        // TODO
+      }
+      @include mobile {
+        width: 80vw;
+        height: 80vw;
+      }
 
       img {
         width: 100%;

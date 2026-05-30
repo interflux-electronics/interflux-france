@@ -5,8 +5,14 @@
 
   interface Props {
     label?: string;
-    size?: 'medium' | 'large' | 'no-size';
-    theme?: 'primary green' | 'primary orange' | 'secondary ghost' | 'tertiary ghost' | 'no-theme';
+    size?: 'small' | 'medium' | 'large' | 'no-size';
+    theme?:
+      | 'primary green'
+      | 'primary orange'
+      | 'secondary ghost'
+      | 'tertiary ghost'
+      | 'full-width'
+      | 'no-theme';
     icon?: Icon;
     iconPosition?: 'left' | 'right';
     url?: string;
@@ -448,189 +454,6 @@
             }
           }
         }
-      }
-    }
-
-    // For the mobile chevron navigation buttons
-    // For the mobile hamburger button
-    &.square {
-      flex-shrink: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      @include tablet {
-        margin: 1.5vw;
-        width: 6vw;
-        height: 6vw;
-        border: 0.325vw solid rgba(white, 0.2);
-        border-radius: 0.6vw;
-      }
-      @include mobile {
-        margin: 4.5vw;
-        width: 12vw;
-        height: 12vw;
-        border: 0.625vw solid rgba(white, 0.2);
-        border-radius: 1vw;
-      }
-      color: white;
-      transition: background-color var(--ease-out-expo) 300ms;
-      &:hover,
-      &:focus {
-        box-shadow: 0 0 0 1px white;
-        background: rgba(white, 0.1);
-        border-color: white;
-      }
-      &.hamburger {
-        :global {
-          path {
-            transition: all 300ms ease;
-            transition-property: transform, opacity;
-            transform-origin: center;
-          }
-          &.close {
-            path:nth-child(1) {
-              transform: rotate(45deg) translate(0%, 30%);
-            }
-            path:nth-child(2) {
-              transform: scale(1.2, 0);
-              opacity: 0;
-            }
-            path:nth-child(3) {
-              transform: rotate(-45deg) translate(0%, -30%);
-            }
-          }
-        }
-      }
-      :global {
-        svg {
-          &.hamburger {
-            @include tablet {
-              height: 3.2vw;
-            }
-            @include mobile {
-              height: 6.5vw;
-            }
-            width: auto;
-          }
-          &.chevron-left {
-            @include tablet {
-              height: 2.8vw;
-            }
-            @include mobile {
-              height: 5.5vw;
-            }
-            width: auto;
-          }
-          &.chevron-down {
-            @include tablet {
-              width: 2.8vw;
-            }
-            @include mobile {
-              width: 5.5vw;
-            }
-            height: auto;
-          }
-          [fill] {
-            fill: white;
-          }
-        }
-      }
-    }
-
-    // For mobile hamburger navigation
-    // TODO: move to <MobileHeader>
-    &.stacked {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: none;
-      width: 100vw;
-      &.medium {
-        @include tablet {
-          font-size: 3vw;
-          border-radius: 0.4vw;
-          padding: 6vw 2vw;
-        }
-        @include mobile {
-          font-size: 5.6vw;
-          border-radius: 0.8vw;
-          padding: 8vw 3vw;
-        }
-        :global {
-          svg {
-            @include tablet {
-              max-width: 5vw;
-              max-height: 5vw;
-              margin-right: 3vw;
-            }
-            @include mobile {
-              max-width: 8vw;
-              max-height: 8vw;
-              margin-right: 4vw;
-            }
-          }
-        }
-      }
-      &.small {
-        @include tablet {
-          font-size: 3vw;
-          border-radius: 0.4vw;
-          padding: 3vw 2vw;
-        }
-        @include mobile {
-          font-size: 4.6vw;
-          border-radius: 0.8vw;
-          padding: 3vw 4.5vw;
-        }
-
-        :global {
-          img {
-            @include tablet {
-              width: 8vw;
-              height: 8vw;
-            }
-            @include mobile {
-              width: 12vw;
-              height: 12vw;
-            }
-          }
-        }
-
-        span {
-          text-overflow: ellipsis;
-          overflow: hidden;
-          @include tablet {
-            max-width: 85vw;
-          }
-          @include mobile {
-            max-width: 80vw;
-          }
-        }
-      }
-      &.white {
-        color: white;
-        transition: all var(--ease-out-expo) 400ms;
-        border-top: 1px solid rgba(white, 0.2);
-        border-radius: 0;
-        &:last-of-type {
-          border-bottom: 1px solid rgba(white, 0.2);
-        }
-        :global {
-          svg {
-            [fill] {
-              fill: white;
-            }
-          }
-        }
-        &:hover,
-        &:focus {
-          box-shadow: inset 0 0 0 2px white;
-          background: rgba(white, 0.1);
-        }
-      }
-      &.left {
-        justify-content: flex-start;
-        gap: 4vw;
       }
     }
   }

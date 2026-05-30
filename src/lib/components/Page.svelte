@@ -17,10 +17,6 @@
   let isMobile = $derived(browser ? mobile.current : device?.type === 'mobile');
   let isTablet = $derived(browser ? tablet.current : device?.type === 'tablet');
   let narrowView = $derived(isMobile || isTablet);
-
-  function onPageClick() {
-    header.shownMenu = 'none';
-  }
 </script>
 
 {#if header.visible && narrowView}
@@ -31,10 +27,6 @@
   id="page"
   class={page.frozen ? 'frozen' : 'scrollable'}
   style:top={page.frozen ? `-${page.lastScroll}px` : undefined}
-  onclick={onPageClick}
-  onkeyup={onPageClick}
-  role="button"
-  tabindex="0"
 >
   {#if header.visible && !narrowView}
     <DesktopHeader />

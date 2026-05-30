@@ -4,7 +4,7 @@
   import { page } from '$app/state';
   import Button from '$lib/components/Button.svelte';
 
-  let overlap = $derived(page.url.pathname != '/');
+  let overlap = $derived(!['/'].includes(page.url.pathname));
 </script>
 
 <header id="desktop" class:overlap>

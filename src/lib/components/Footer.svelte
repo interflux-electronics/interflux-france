@@ -2,7 +2,7 @@
   import Line from '$lib/components/Line.svelte';
   import { page } from '$app/state';
 
-  let showLine = $derived(page.url.pathname != '/contact');
+  let showLine = $derived(!['/', '/contact'].includes(page.url.pathname));
 </script>
 
 <footer>
@@ -36,12 +36,26 @@
 
 <style lang="scss">
   .blue-area {
-    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
     background: linear-gradient(89deg, #163759 -5.74%, #23578c 104.68%);
+    @include widescreen {
+      height: 80px;
+      gap: 30px;
+    }
+    @include desktop {
+      height: vw(80px);
+      gap: vw(30px);
+    }
+    @include tablet {
+      // TODO
+    }
+    @include mobile {
+      flex-direction: column;
+      gap: 1vw;
+      padding: 5vw;
+    }
     .left,
     .right {
       width: 100%;
@@ -51,10 +65,24 @@
     }
     .left {
       display: flex;
-      justify-content: flex-end;
       align-items: center;
+      @include widescreen {
+        justify-content: flex-start;
+      }
+      @include desktop {
+        justify-content: flex-start;
+      }
+      @include tablet {
+        justify-content: center; // TODO
+      }
+      @include mobile {
+        justify-content: center; // TODO
+      }
     }
     .center {
+      @include mobile {
+        order: -1;
+      }
       img {
         flex-shrink: 0;
         width: 86px;
@@ -64,8 +92,19 @@
     }
     .right {
       display: flex;
-      justify-content: flex-start;
       align-items: center;
+      @include widescreen {
+        justify-content: flex-start;
+      }
+      @include desktop {
+        justify-content: flex-start;
+      }
+      @include tablet {
+        justify-content: center; // TODO
+      }
+      @include mobile {
+        justify-content: center; // TODO
+      }
       a {
         background-color: transparent;
         color: white;

@@ -16,10 +16,25 @@
   .product-tiles {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
     align-items: start;
-    width: 800px;
+
+    @include widescreen {
+      grid-template-columns: repeat(3, 1fr);
+      width: 800px;
+      gap: 22px;
+    }
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+      width: vw(800px);
+      gap: vw(22px);
+    }
+    @include tablet {
+      // TODO
+    }
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 3vw;
+    }
 
     :global {
       a {
@@ -28,8 +43,23 @@
           border-color: var(--blue-4);
 
           img {
-            width: 250px;
-            height: 250px;
+            aspect-ratio: 1 / 1;
+
+            @include widescreen {
+              width: 250px;
+              height: 250px;
+            }
+            @include desktop {
+              width: vw(250px);
+              height: vw(250px);
+            }
+            @include tablet {
+              // TODO
+            }
+            @include mobile {
+              width: 100%;
+              height: auto;
+            }
           }
         }
 
@@ -55,12 +85,23 @@
           }
 
           p {
-            font-size: 26px;
             color: white;
+
+            @include widescreen {
+              font-size: 26px;
+            }
+            @include desktop {
+              font-size: vw(26px);
+            }
+            @include tablet {
+            }
+            @include mobile {
+              font-size: 8vw;
+            }
 
             em {
               font-style: normal;
-              font-family: 'Nunito Sans Bold', sans-serif;
+              font-family: var(--bold);
             }
           }
         }
