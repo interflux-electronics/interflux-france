@@ -52,9 +52,16 @@
 
         <ProductTile
           href="https://interflux.fr/product/IF-2005C"
-          src="https://cdn.interflux.com/images/products/IF-2005C/IF-2005C-1L@600x600.webp"
+          src="https://cdn.interflux.com/images/products/IF-2005C/IF-2005C-10L-angle@600x600.webp"
           h="IF 2005C"
           p="Flux de brasage à base de solvants"
+        />
+
+        <ProductTile
+          href="https://interflux.fr/product/PacIFic-2009M"
+          src="https://cdn.interflux.com/images/products/PacIFic-2009M/Pacific-2009M-10L-angle@600x600.webp"
+          h="Pacific 2009M"
+          p="Flux de brasage à base d'eau de type « VOC free »"
         />
 
         <ProductTile
@@ -91,13 +98,14 @@
           h="Alliage en barres"
           p="Alliage sans plomb à bas point de fusion LMPA-Q"
         />
-
-        <ProductTile href="https://interflux.fr" css="orange">
-          <p>vers le site web</p>
-          <p><em>www.interflux.fr</em></p>
-        </ProductTile>
       </ProductTiles>
     </div>
+    <Button
+      size="large"
+      theme="primary orange"
+      label="www.interflux.fr"
+      url="https://interflux.fr"
+    />
   </div>
 </section>
 
@@ -155,6 +163,7 @@
   #intro {
     .liner {
       flex-direction: column;
+      align-items: center;
       gap: 40px;
     }
     .text {

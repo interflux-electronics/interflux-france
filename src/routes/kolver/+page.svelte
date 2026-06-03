@@ -64,21 +64,25 @@
         h="Contrôleurs de couple"
         p="Etendue de mesure de 0.05 - 100 Nm"
       />
-      <!-- <ProductTile
+      <ProductTile
         href="https://kolver.com/en/products/reaction-positioning-arms"
         src="/img/kolver-product-7.jpg"
-        h="Distributeurs automatique de vis"
-      /> -->
+        h="Bras de maintien"
+        p="pour visseuses et aménagement des postes de travail"
+      />
       <ProductTile
         href="https://kolver.com/en/products/automatic-screw-suppliers"
         src="/img/kolver-product-8.jpg"
         h="Distributeurs automatique de vis"
       />
-      <ProductTile href="https://www.interflux-vissage.com" css="orange">
-        <p>vers le site web</p>
-        <p><em>www.interflux-vissage.com</em></p>
-      </ProductTile>
     </ProductTiles>
+
+    <Button
+      size="large"
+      theme="primary orange"
+      label="www.interflux-vissage.com"
+      url="https://www.interflux-vissage.com"
+    />
   </div>
 </section>
 
@@ -136,6 +140,7 @@
   #intro {
     .liner {
       flex-direction: column;
+      align-items: center;
       gap: 40px;
     }
     .text {

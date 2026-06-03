@@ -65,50 +65,6 @@
             }
           }
         }
-
-        &.orange {
-          background-color: var(--orange-3);
-          border-color: var(--orange-4);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          text-align: center;
-
-          &:hover,
-          &:focus {
-            em {
-              text-decoration: underline;
-            }
-          }
-
-          a {
-            width: 100%;
-            height: 100%;
-          }
-
-          p {
-            color: white;
-
-            @include widescreen {
-              font-size: 26px;
-            }
-            @include desktop {
-              font-size: vw(26px);
-            }
-            @include tablet {
-              font-size: 2.5vw;
-            }
-            @include mobile {
-              font-size: 8vw;
-            }
-
-            em {
-              font-style: normal;
-              font-family: var(--bold);
-            }
-          }
-        }
       }
     }
   }
